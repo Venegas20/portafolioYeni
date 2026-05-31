@@ -1,0 +1,293 @@
+ 
+    /* ===== VARIABLES DE DISEÑO (PALETA ROSA ACADÉMICA) ===== */
+    :root {
+      --rose-dark: #804060;     
+      --rose-mid: #b06080;      
+      --rose-light: #f8c8dc;    
+      --gold-accent: #f59e0b;   
+      --bg-light: #fff0f5;      
+      --card-bg: #ffffff;       
+      --text-main: #402030;     
+      --text-muted: #806070;    
+      --border-color: #e0b0c0;  
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(128, 64, 96, 0.95);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 2px solid var(--rose-mid);
+    }
+
+    .nav-brand {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-brand span {
+      color: var(--rose-light);
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+      overflow-x: auto;
+      max-width: 70%;
+      padding-bottom: 5px;
+    }
+
+    .nav-links a {
+      color: #f0e0e8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.25rem 0.5rem;
+      transition: color 0.3s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--rose-light);
+    }
+
+    /* ===== HERO BANNER ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--rose-dark) 0%, #a05070 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      color: var(--rose-light);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .hero p {
+      color: #e0c0d0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ===== CONTENEDOR PRINCIPAL ===== */
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* ===== TARJETA DE PERFIL ===== */
+    .profile-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border: 1px solid var(--border-color);
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .profile-avatar {
+      background: var(--rose-light);
+      padding: 1.5rem;
+      border-radius: 50%;
+      color: var(--rose-dark);
+      border: 2px solid var(--rose-mid);
+    }
+
+    .profile-info h2 {
+      font-size: 1.8rem;
+      color: var(--rose-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .profile-role {
+      color: var(--rose-mid);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .profile-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .profile-tag {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: var(--bg-light);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+    }
+
+    /* ===== SECCIONES SEMANALES ===== */
+    .section-title {
+      font-size: 2rem;
+      color: var(--rose-dark);
+      margin-bottom: 1.5rem;
+      border-left: 5px solid var(--rose-mid);
+      padding-left: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-title span {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      font-weight: normal;
+    }
+
+    .week-block {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    .content-sub {
+      font-size: 1.2rem;
+      color: var(--rose-mid);
+      margin: 1.5rem 0 0.5rem 0;
+      font-weight: 600;
+    }
+
+    .concept-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .badge {
+      background: var(--bg-light);
+      color: var(--rose-dark);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+    }
+
+    /* ===== MULTIMEDIA EVIDENCIAS ===== */
+    .evidence-grid {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .media-box {
+      background: var(--bg-light);
+      border-radius: 12px;
+      padding: 1rem;
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .media-title {
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+      color: var(--rose-dark);
+      text-align: left;
+    }
+
+    .placeholder-box {
+      background: #fdf2f8;
+      border: 2px dashed var(--rose-mid);
+      border-radius: 8px;
+      padding: 2rem 1rem;
+      color: var(--rose-mid);
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    /* ===== REFLEXIÓN ===== */
+    .reflection-box {
+      background: #fffafa;
+      border-left: 4px solid var(--rose-mid);
+      padding: 1.25rem;
+      border-radius: 0 12px 12px 0;
+      margin-top: 1rem;
+    }
+
+    .reflection-box em {
+      font-weight: bold;
+      color: var(--rose-dark);
+      font-style: normal;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--rose-dark);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 5rem;
+      border-top: 4px solid var(--rose-mid);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #e0c0d0;
+    }
+ 
+    /* ===== AJUSTE PARA IMÁGENES ===== */
+
+
+.media-box img, 
+.placeholder-box img {
+  max-width: 100%; /* Evita que la imagen sea más ancha que su caja */
+  height: auto; /* Mantiene la proporción para que no se deforme */
+  border-radius: 8px; /* Le da unos bordes redondeados elegantes */
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
+}
